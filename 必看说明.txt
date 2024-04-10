@@ -1,0 +1,22 @@
+﻿1、package_info的更新版本为package_info_plus，安装依赖的时候注意一下，其他的用法都是一样的，详情参考源码pubspec.yaml
+
+
+2、open_file和package_info_plus版本冲突的解决办法（后期没有冲突请忽略）
+
+ 由于
+  
+	open_file: ^3.2.1  依赖于 ffi ^1.0.0  
+
+	package_info_plus: ^1.4.3+1    依赖于 ffi ^2.0.0
+
+
+所以
+	open_file和package_info_plus一起使用的时候会有依赖冲突
+
+
+
+解决办法：通过git下载我们修改后的open_file，详情也可以参考pubspec.yaml
+  
+      open_filex:
+        git:
+          url: https://github.com/phonegap100/open_file.git
